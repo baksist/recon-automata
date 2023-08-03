@@ -4,5 +4,3 @@
   apt:
     pkg: ["masscan"]
     update_cache: true
-  tags:
-    - masscan

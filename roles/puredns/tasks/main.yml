@@ -1,13 +1,10 @@
 ---
+
 - name: Check if puredns is already installed
   stat:
     path: '{{ansible_user_dir}}/go/bin/puredns'
   register: stat_result
-  tags:
-    - puredns
 
 - name: Install puredns if not installed
   command: go install github.com/d3mondev/puredns/v2@latest 
   when: not stat_result.stat.exists
-  tags:
-    - puredns

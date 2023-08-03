@@ -1,0 +1,5 @@
+install_nmap: true
+install_masscan: true
+install_gau: true
+install_dnsvalidator: true
+install_puredns: true

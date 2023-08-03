@@ -1,2 +1,3 @@
 .vscode/
 hosts
+group_vars/debug.yml

@@ -8,11 +8,9 @@ To install all the tools, run:
 $ ansible-playbook -i hosts setup.yml
 ```
 
-If you wish to install only specific tools, run:
+The tools to install are defined in the `group_vars`. Unneeded tools should have `install_%tool_name%` variable set to `false`.
 
-```bash
-$ ansible-playbook -i hosts setup.yml -t tool,another_tool
-```
+> TODO: create a switch so you could specify only required tools with `true`
 
 Currently implemented tools are:
 

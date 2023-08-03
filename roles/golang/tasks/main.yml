@@ -4,8 +4,6 @@
   apt:
     pkg: ["golang-go"]
     update_cache: true
-  tags:
-    - go
 
 - name: Add go folder to path
   when: ansible_env.PATH is not search('{{ansible_user_dir}}/go/bin')
@@ -13,5 +11,3 @@
     dest: "{{ansible_user_dir}}/.bashrc"
     line: "export PATH=$PATH:~/go/bin"
     owner: "{{ansible_user}}"
-  tags:
-    - go

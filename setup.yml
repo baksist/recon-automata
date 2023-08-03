@@ -1,9 +1,12 @@
 - hosts: all
   roles:
-    - nmap
-    - masscan
-    - golang
-    - gau
-    - dnsvalidator
-    - puredns
-  
+    - role: nmap
+      when: install_nmap
+    - role: masscan
+      when: install_masscan
+    - role: gau
+      when: install_gau
+    - role: dnsvalidator
+      when: install_dnsvalidator
+    - role: puredns
+      when: install_puredns

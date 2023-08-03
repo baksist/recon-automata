@@ -1,8 +1,10 @@
 ---
+- name: print varnmap
+  debug:
+    msg: "Variable is {{install_nmap}}"
+
 - name: Install nmap package
   become: true
   apt:
     pkg: ["nmap"]
     update_cache: true
-  tags:
-    - nmap
