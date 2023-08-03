@@ -21,3 +21,6 @@ Currently implemnted tools are:
 - [gau](https://github.com/lc/gau)
 - [dnsvalidator](https://github.com/vortexau/dnsvalidator)
 - [puredns](https://github.com/d3mondev/puredns)
+
+
+> Note: this playbook was tested on Ubuntu Server 23.04 and will work only on Debian-based distros.
