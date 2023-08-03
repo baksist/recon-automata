@@ -1,0 +1,33 @@
+---
+
+- name: install pip3
+  become: true
+  apt:
+    pkg: ["python3-pip"]
+    update_cache: true
+  tags:
+    - dnsvalidator
+
+- name: clone dnsvalidator repo
+  git:
+    repo: https://github.com/vortexau/dnsvalidator.git
+    dest: ~/dnsvalidator
+  tags:
+    - dnsvalidator
+
+- name: check if dnsvalidator is already installed
+  command: which dnsvalidator
+  changed_when: false
+  failed_when: dnsvalidator_installed.rc not in [0,1]
+  register: dnsvalidator_installed
+  tags:
+    - dnsvalidator
+
+- name: install from source
+  become: true
+  command:
+    chdir: "/home/{{ansible_user}}/dnsvalidator"
+    cmd: python3 setup.py install
+  when: dnsvalidator_installed.rc not in [ 0 ]
+  tags:
+    - dnsvalidator

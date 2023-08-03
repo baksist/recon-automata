@@ -1,0 +1,9 @@
+- hosts: all
+  roles:
+    - nmap
+    - masscan
+    - golang
+    - gau
+    - dnsvalidator
+    - puredns
+  

@@ -1,0 +1,8 @@
+---
+- name: Install masscan package
+  become: true
+  apt:
+    pkg: ["masscan"]
+    update_cache: true
+  tags:
+    - masscan

@@ -1,0 +1,13 @@
+---
+- name: Check if gau is already installed
+  stat:
+    path: '{{ansible_user_dir}}/go/bin/gau'
+  register: stat_result
+  tags:
+    - gau
+
+- name: Install gau if not installed
+  command: go install github.com/lc/gau/v2/cmd/gau@latest 
+  when: not stat_result.stat.exists
+  tags:
+    - gau

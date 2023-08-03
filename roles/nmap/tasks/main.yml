@@ -1,0 +1,8 @@
+---
+- name: Install nmap package
+  become: true
+  apt:
+    pkg: ["nmap"]
+    update_cache: true
+  tags:
+    - nmap
