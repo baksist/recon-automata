@@ -17,7 +17,7 @@ Currently implemented tools are:
 
 First of all, you need to install Ansible. Manual can be found [here](https://docs.ansible.com/ansible/latest/installation_guide/index.html).
 
-Once you have installed Ansible, you need to create your inventary. You can name it as you wish, but the general rule of thumb is to name it `hosts`. An example is provided in `hosts.example`:
+Once you have installed Ansible, you need to create your inventory file. You can name it as you wish, but the general rule of thumb is to name it `hosts`. An example is provided in `hosts.example`:
 
 ```yaml
 # ./hosts
