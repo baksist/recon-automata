@@ -14,7 +14,7 @@ If you wish to install only specific tools, run:
 $ ansible-playbook -i hosts setup.yml -t tool,another_tool
 ```
 
-Currently implemnted tools are:
+Currently implemented tools are:
 
 - [nmap](https://nmap.org/)
 - [masscan](https://github.com/robertdavidgraham/masscan)
