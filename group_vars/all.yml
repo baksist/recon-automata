@@ -1,5 +1,5 @@
-install_nmap: true
-install_masscan: true
-install_gau: true
-install_dnsvalidator: true
-install_puredns: true
+install_nmap: false
+install_masscan: false
+install_gau: false
+install_dnsvalidator: false
+install_puredns: false
