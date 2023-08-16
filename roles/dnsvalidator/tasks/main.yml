@@ -1,9 +1,9 @@
 ---
 
-- name: install pip3
+- name: install pip3 and/or git
   become: true
   apt:
-    pkg: ["python3-pip"]
+    pkg: ["python3-pip", "git"]
     update_cache: true
 
 - name: clone dnsvalidator repo
@@ -20,6 +20,6 @@
 - name: install from source
   become: true
   command:
-    chdir: "/home/{{ansible_user}}/dnsvalidator"
+    chdir: "{{ansible_user_dir}}/dnsvalidator"
     cmd: python3 setup.py install
   when: dnsvalidator_installed.rc not in [ 0 ]
