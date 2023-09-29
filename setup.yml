@@ -8,5 +8,7 @@
       when: install_gau
     - role: dnsvalidator
       when: install_dnsvalidator
+    - role: massdns
+      when: install_massdns
     - role: puredns
       when: install_puredns

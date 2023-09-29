@@ -1,0 +1,16 @@
+---
+
+- name: clone massdns src
+  git:
+    repo: https://github.com/blechschmidt/massdns.git
+    dest: ~/massdns
+
+- name: build massdns from src
+  make:
+    chdir: ~/massdns
+
+- name: install massdns
+  make:
+    chdir: "{{ansible_user_dir}}/massdns"
+    target: install
+  become: true

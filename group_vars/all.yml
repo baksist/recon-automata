@@ -2,4 +2,5 @@ install_nmap: false
 install_masscan: false
 install_gau: false
 install_dnsvalidator: false
+install_massdns: false
 install_puredns: false
