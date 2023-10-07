@@ -1,6 +1,6 @@
 all:
   hosts:
-    host1: 
+    my_host: 
       ansible_host: 127.0.0.1 # remote machine address/domain name
       ansible_user: root # remote user
       ansible_password: yourpass # remote user's password

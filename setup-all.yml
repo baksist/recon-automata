@@ -1,0 +1,8 @@
+- hosts: all
+  roles:
+    - role: nmap
+    - role: masscan
+    - role: gau
+    - role: dnsvalidator
+    - role: massdns
+    - role: puredns
